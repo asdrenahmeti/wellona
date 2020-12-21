@@ -1,0 +1,687 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+$wellona-orange: #fbd617;
+$wellona-lightblue: #5494d8;
+$wellona-darkblue: #2d6bad;
+$wellona-lightgrey: #ebebeb;
+$wellona-darkgrey: #707070;
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Avenir LT Std";
+}
+
+.btn {
+  padding: 15px 40px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn-orange {
+  background-color: $wellona-orange;
+  border-radius: 40px;
+}
+
+.btn:link {
+  text-decoration: none;
+}
+
+.active {
+  color: $wellona-darkblue !important;
+}
+
+.container {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.col-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row-center {
+  display: flex;
+  justify-content: center;
+}
+
+.section-title {
+  color: white;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 2.625rem;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.section-desc {
+  color: $wellona-lightgrey;
+  margin-bottom: 20px;
+  font-size: 1.375rem;
+}
+
+.open-menu {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.show-menu {
+  left: 0 !important;
+}
+
+.show-dropdown {
+  display: block !important;
+}
+
+.extra {
+  display: none !important;
+}
+
+/* Home Section */
+.wellona-home {
+  height: 100vh;
+  background-image: url("../images/home-pattern.svg"),
+    linear-gradient(
+      90deg,
+      $wellona-darkblue,
+      $wellona-lightblue,
+      $wellona-darkblue
+    );
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+
+  .section-home-title {
+    font-family: "Avenir LT Std";
+    font-weight: 900;
+    font-style: normal;
+    color: white;
+    font-size: 2.625rem;
+  }
+  .menu {
+    font-family: "Avenir LT Std";
+    font-weight: 500;
+    width: 90%;
+    height: 75px;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    padding: 30px;
+    left: 0;
+    right: 0;
+    top: 15px;
+    position: absolute;
+
+    .logo {
+      max-width: 150px;
+      object-fit: contain;
+      position: relative;
+      top: -7px;
+    }
+
+    .dropdown {
+      position: relative;
+      padding: 10px;
+      cursor: pointer;
+
+      i {
+        color: #c4c4c4;
+        font-size: 1rem;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        background-color: white;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: none;
+        top: 40px;
+        left: -85px;
+        color: #c4c4c4;
+        box-shadow: 0px 2px 8px $wellona-darkgrey;
+
+        li {
+          margin: 10px 0;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      li {
+        display: inline-block;
+        margin: 0 30px;
+      }
+
+      li:nth-last-child(-n + 2) {
+        margin: 0 5px;
+      }
+
+      .user-profile {
+        object-fit: contain;
+        max-width: 100%;
+      }
+
+      .user-profile-button {
+        border-radius: 100%;
+        background-color: $wellona-lightgrey;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+      }
+
+      .nav-item {
+        font-size: 1rem;
+      }
+      .nav-item:link {
+        text-decoration: none;
+        color: $wellona-darkgrey;
+      }
+      .nav-item:visited {
+        color: $wellona-darkgrey;
+      }
+    }
+  }
+
+  .wellona-pampers {
+    width: 100%;
+  }
+}
+
+.wellona-services {
+  background-image: linear-gradient(
+    90deg,
+    $wellona-darkblue,
+    $wellona-lightblue,
+    $wellona-darkblue
+  );
+  color: white;
+  padding: 70px 0;
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  .column {
+    text-align: center;
+    width: 30%;
+    margin: 100px 0;
+  }
+
+  .row-center {
+    justify-content: space-between;
+  }
+
+  .service-title {
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  .service-desc {
+    color: #bec1c4;
+    max-width: 75%;
+    margin: 0 auto;
+    line-height: 1.5rem;
+  }
+
+  .service-img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+    object-fit: contain;
+  }
+}
+
+.wellona-info {
+  padding: 30px 0;
+  background-image: url("../images/subscription-pattern.svg");
+  overflow: hidden;
+
+  .info-title {
+    color: $wellona-darkblue;
+    margin: 10px 0;
+    font-size: 2.626rem;
+    font-weight: 500;
+  }
+
+  .info-desc {
+    color: #c4c4c4;
+    font-size: 1.375rem;
+    font-weight: 500;
+  }
+
+  .info-text {
+    margin-bottom: 40px;
+  }
+
+  .wellona-baby {
+    max-width: 70%;
+    align-self: flex-end;
+  }
+
+  .sun-left {
+    align-self: flex-start;
+  }
+}
+
+.wellona-subscribe {
+  padding: 30px 0;
+
+  .wellona-sub-baby {
+    width: 100%;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .subscribe-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    margin: auto;
+    right: 0;
+    top: 50%;
+  }
+
+  .section-title {
+    color: $wellona-darkblue;
+    margin-bottom: 20px;
+  }
+}
+
+.wellona-promises {
+  padding: 30px 0;
+  background-image: linear-gradient(
+    90deg,
+    $wellona-darkblue,
+    $wellona-lightblue,
+    $wellona-darkblue
+  );
+
+  .promises-desc {
+    font-size: 1.375rem;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .column {
+    padding: 30px;
+    width: 30%;
+  }
+
+  .img-container {
+    background-color: #6499d0;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    box-shadow: 0 6px 30px #27272729;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .service-desc {
+    text-align: center;
+    color: white;
+  }
+}
+
+.wellona-arch {
+  .arch-title {
+    color: $wellona-orange !important;
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+
+  .arch-desc {
+    font-weight: 500;
+    font-size: 1.375rem;
+    line-height: 1.4em;
+  }
+
+  .arch-sub-title {
+    color: $wellona-darkblue;
+    font-size: 1.625rem;
+    margin-bottom: 30px;
+  }
+}
+
+.wellona-footer {
+  padding: 40px 0;
+  .column {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+
+  .foot-title {
+    color: $wellona-darkblue;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .footer-item {
+    text-decoration: none;
+    color: #c4c4c4;
+    font-weight: 500;
+  }
+
+  .row-center {
+    justify-content: space-around;
+  }
+
+  .column:not(:last-child) {
+    border-right: 2px solid $wellona-lightgrey;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wellona-home {
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .wellona-services {
+    .row-center {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .column {
+      width: 45%;
+      margin-bottom: 30px;
+      padding: 0 30px;
+    }
+
+    .service-desc {
+      max-width: 100%;
+    }
+
+    .column:nth-child(3) {
+      align-self: center;
+    }
+  }
+
+  .wellona-promises {
+    .container {
+      margin-top: 50px;
+    }
+
+    .col-center {
+      height: 300px;
+    }
+
+    .column {
+      width: 45%;
+      margin-bottom: 0px;
+      padding: 0 30px;
+    }
+
+    .row-center {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+.wellona-arch {
+  padding: 30px 0;
+  text-align: center;
+
+  .arch-image {
+    max-width: 80%;
+    margin: 30px;
+  }
+
+  .arch-title {
+    text-transform: uppercase;
+    color: $wellona-darkblue;
+    margin: 20px 0;
+  }
+
+  .arch-desc {
+    color: #c4c4c4;
+  }
+
+  .arch-banner-image {
+    max-height: 80%;
+    object-fit: contain;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .arch-banner {
+    position: relative;
+  }
+
+  .arch-sub {
+    position: absolute;
+    z-index: 300;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section-title {
+    margin-bottom: 0;
+  }
+
+  .wellona-home {
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 0;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+
+      .open-menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+      }
+
+      ul {
+        height: calc(100vh - 75px);
+        position: absolute;
+        top: 75px;
+        width: 100%;
+        background-color: white;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 30px;
+        transition: all 0.5s;
+        left: -100%;
+
+        .extra {
+          display: block !important;
+        }
+        li {
+          display: block;
+          text-align: center;
+          margin: 30px;
+
+          .user-profile-button {
+            display: none;
+          }
+
+          .nav-item {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .dropdown {
+        display: none;
+      }
+    }
+  }
+
+  .wellona-services {
+    .column {
+      margin: 20px 0;
+    }
+  }
+
+  .wellona-subscribe {
+    .section-title {
+      font-size: 1.7rem;
+    }
+  }
+
+  .wellona-promises {
+    padding: 50px 0;
+    .promises-desc {
+      padding: 0;
+    }
+
+    .column {
+      margin-bottom: 20px;
+    }
+  }
+
+  .wellona-footer {
+    .foot-title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wellona-home {
+    text-align: center;
+
+    .col-center {
+      justify-content: space-between;
+      min-height: 500px;
+    }
+  }
+
+  .wellona-services {
+    .column {
+      width: 100%;
+    }
+
+    .col-center {
+      justify-content: center;
+    }
+  }
+
+  .wellona-promises {
+    .column {
+      width: 100%;
+    }
+
+    .col-center {
+      justify-content: center;
+    }
+  }
+
+  .wellona-arch {
+    padding: 0;
+  }
+
+  .arch-banner {
+    background-image: url("../images/home-pattern.svg"),
+      linear-gradient(
+        90deg,
+        $wellona-darkblue,
+        $wellona-lightblue,
+        $wellona-darkblue
+      );
+    height: 200px;
+
+    .arch-sub-title {
+      color: white;
+    }
+
+    .arch-banner-image {
+      display: none;
+    }
+
+    .arch-title {
+      color: white;
+    }
+  }
+
+  .wellona-footer {
+    .column {
+      width: 50%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .row-center {
+      flex-wrap: wrap;
+    }
+
+    .column:nth-child(2) {
+      border: none;
+    }
+  }
+
+  .wellona-subscribe {
+    .section-title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wellona-subscribe {
+    .section-title {
+      font-size: 1rem;
+    }
+  }
+}

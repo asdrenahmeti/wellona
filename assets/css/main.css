@@ -1,0 +1,565 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Avenir LT Std";
+}
+
+.btn {
+  padding: 15px 40px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn-orange {
+  background-color: #fbd617;
+  border-radius: 40px;
+}
+
+.btn:link {
+  text-decoration: none;
+}
+
+.active {
+  color: #2d6bad !important;
+}
+
+.container {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.col-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row-center {
+  display: flex;
+  justify-content: center;
+}
+
+.section-title {
+  color: white;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 2.625rem;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.section-desc {
+  color: #ebebeb;
+  margin-bottom: 20px;
+  font-size: 1.375rem;
+}
+
+.open-menu {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.show-menu {
+  left: 0 !important;
+}
+
+.show-dropdown {
+  display: block !important;
+}
+
+.extra {
+  display: none !important;
+}
+
+/* Home Section */
+.wellona-home {
+  height: 100vh;
+  background-image: url("../images/home-pattern.svg"), linear-gradient(90deg, #2d6bad, #5494d8, #2d6bad);
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+}
+.wellona-home .section-home-title {
+  font-family: "Avenir LT Std";
+  font-weight: 900;
+  font-style: normal;
+  color: white;
+  font-size: 2.625rem;
+}
+.wellona-home .menu {
+  font-family: "Avenir LT Std";
+  font-weight: 500;
+  width: 90%;
+  height: 75px;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  padding: 30px;
+  left: 0;
+  right: 0;
+  top: 15px;
+  position: absolute;
+}
+.wellona-home .menu .logo {
+  max-width: 150px;
+  object-fit: contain;
+  position: relative;
+  top: -7px;
+}
+.wellona-home .menu .dropdown {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+.wellona-home .menu .dropdown i {
+  color: #c4c4c4;
+  font-size: 1rem;
+}
+.wellona-home .menu .dropdown .dropdown-menu {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: none;
+  top: 40px;
+  left: -85px;
+  color: #c4c4c4;
+  box-shadow: 0px 2px 8px #707070;
+}
+.wellona-home .menu .dropdown .dropdown-menu li {
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+}
+.wellona-home .menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.wellona-home .menu ul li {
+  display: inline-block;
+  margin: 0 30px;
+}
+.wellona-home .menu ul li:nth-last-child(-n+2) {
+  margin: 0 5px;
+}
+.wellona-home .menu ul .user-profile {
+  object-fit: contain;
+  max-width: 100%;
+}
+.wellona-home .menu ul .user-profile-button {
+  border-radius: 100%;
+  background-color: #ebebeb;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.wellona-home .menu ul .nav-item {
+  font-size: 1rem;
+}
+.wellona-home .menu ul .nav-item:link {
+  text-decoration: none;
+  color: #707070;
+}
+.wellona-home .menu ul .nav-item:visited {
+  color: #707070;
+}
+.wellona-home .wellona-pampers {
+  width: 100%;
+}
+
+.wellona-services {
+  background-image: linear-gradient(90deg, #2d6bad, #5494d8, #2d6bad);
+  color: white;
+  padding: 70px 0;
+}
+.wellona-services .section-title {
+  margin-bottom: 50px;
+}
+.wellona-services .column {
+  text-align: center;
+  width: 30%;
+  margin: 100px 0;
+}
+.wellona-services .row-center {
+  justify-content: space-between;
+}
+.wellona-services .service-title {
+  margin: 15px 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.wellona-services .service-desc {
+  color: #bec1c4;
+  max-width: 75%;
+  margin: 0 auto;
+  line-height: 1.5rem;
+}
+.wellona-services .service-img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+  object-fit: contain;
+}
+
+.wellona-info {
+  padding: 30px 0;
+  background-image: url("../images/subscription-pattern.svg");
+  overflow: hidden;
+}
+.wellona-info .info-title {
+  color: #2d6bad;
+  margin: 10px 0;
+  font-size: 2.626rem;
+  font-weight: 500;
+}
+.wellona-info .info-desc {
+  color: #c4c4c4;
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+.wellona-info .info-text {
+  margin-bottom: 40px;
+}
+.wellona-info .wellona-baby {
+  max-width: 70%;
+  align-self: flex-end;
+}
+.wellona-info .sun-left {
+  align-self: flex-start;
+}
+
+.wellona-subscribe {
+  padding: 30px 0;
+}
+.wellona-subscribe .wellona-sub-baby {
+  width: 100%;
+}
+.wellona-subscribe .container {
+  position: relative;
+}
+.wellona-subscribe .subscribe-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 50%;
+}
+.wellona-subscribe .section-title {
+  color: #2d6bad;
+  margin-bottom: 20px;
+}
+
+.wellona-promises {
+  padding: 30px 0;
+  background-image: linear-gradient(90deg, #2d6bad, #5494d8, #2d6bad);
+}
+.wellona-promises .promises-desc {
+  font-size: 1.375rem;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  padding: 30px 0;
+}
+.wellona-promises .column {
+  padding: 30px;
+  width: 30%;
+}
+.wellona-promises .img-container {
+  background-color: #6499d0;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  box-shadow: 0 6px 30px #27272729;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.wellona-promises .service-desc {
+  text-align: center;
+  color: white;
+}
+
+.wellona-arch .arch-title {
+  color: #fbd617 !important;
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+.wellona-arch .arch-desc {
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 1.4em;
+}
+.wellona-arch .arch-sub-title {
+  color: #2d6bad;
+  font-size: 1.625rem;
+  margin-bottom: 30px;
+}
+
+.wellona-footer {
+  padding: 40px 0;
+}
+.wellona-footer .column {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wellona-footer ul {
+  list-style: none;
+}
+.wellona-footer li {
+  margin: 10px 0;
+}
+.wellona-footer .foot-title {
+  color: #2d6bad;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.wellona-footer .footer-item {
+  text-decoration: none;
+  color: #c4c4c4;
+  font-weight: 500;
+}
+.wellona-footer .row-center {
+  justify-content: space-around;
+}
+.wellona-footer .column:not(:last-child) {
+  border-right: 2px solid #ebebeb;
+}
+
+@media screen and (max-width: 992px) {
+  .wellona-home {
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .wellona-services .row-center {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .wellona-services .column {
+    width: 45%;
+    margin-bottom: 30px;
+    padding: 0 30px;
+  }
+  .wellona-services .service-desc {
+    max-width: 100%;
+  }
+  .wellona-services .column:nth-child(3) {
+    align-self: center;
+  }
+
+  .wellona-promises .container {
+    margin-top: 50px;
+  }
+  .wellona-promises .col-center {
+    height: 300px;
+  }
+  .wellona-promises .column {
+    width: 45%;
+    margin-bottom: 0px;
+    padding: 0 30px;
+  }
+  .wellona-promises .row-center {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.wellona-arch {
+  padding: 30px 0;
+  text-align: center;
+}
+.wellona-arch .arch-image {
+  max-width: 80%;
+  margin: 30px;
+}
+.wellona-arch .arch-title {
+  text-transform: uppercase;
+  color: #2d6bad;
+  margin: 20px 0;
+}
+.wellona-arch .arch-desc {
+  color: #c4c4c4;
+}
+.wellona-arch .arch-banner-image {
+  max-height: 80%;
+  object-fit: contain;
+  max-width: 100%;
+  position: relative;
+}
+.wellona-arch .arch-banner {
+  position: relative;
+}
+.wellona-arch .arch-sub {
+  position: absolute;
+  z-index: 300;
+  left: 0;
+  right: 0;
+  top: 20%;
+  margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .section-title {
+    margin-bottom: 0;
+  }
+
+  .wellona-home .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  .wellona-home .menu .open-menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+  .wellona-home .menu ul {
+    height: calc(100vh - 75px);
+    position: absolute;
+    top: 75px;
+    width: 100%;
+    background-color: white;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    transition: all 0.5s;
+    left: -100%;
+  }
+  .wellona-home .menu ul .extra {
+    display: block !important;
+  }
+  .wellona-home .menu ul li {
+    display: block;
+    text-align: center;
+    margin: 30px;
+  }
+  .wellona-home .menu ul li .user-profile-button {
+    display: none;
+  }
+  .wellona-home .menu ul li .nav-item {
+    font-size: 2rem;
+  }
+  .wellona-home .menu .dropdown {
+    display: none;
+  }
+
+  .wellona-services .column {
+    margin: 20px 0;
+  }
+
+  .wellona-subscribe .section-title {
+    font-size: 1.7rem;
+  }
+
+  .wellona-promises {
+    padding: 50px 0;
+  }
+  .wellona-promises .promises-desc {
+    padding: 0;
+  }
+  .wellona-promises .column {
+    margin-bottom: 20px;
+  }
+
+  .wellona-footer .foot-title {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wellona-home {
+    text-align: center;
+  }
+  .wellona-home .col-center {
+    justify-content: space-between;
+    min-height: 500px;
+  }
+
+  .wellona-services .column {
+    width: 100%;
+  }
+  .wellona-services .col-center {
+    justify-content: center;
+  }
+
+  .wellona-promises .column {
+    width: 100%;
+  }
+  .wellona-promises .col-center {
+    justify-content: center;
+  }
+
+  .wellona-arch {
+    padding: 0;
+  }
+
+  .arch-banner {
+    background-image: url("../images/home-pattern.svg"), linear-gradient(90deg, #2d6bad, #5494d8, #2d6bad);
+    height: 200px;
+  }
+  .arch-banner .arch-sub-title {
+    color: white;
+  }
+  .arch-banner .arch-banner-image {
+    display: none;
+  }
+  .arch-banner .arch-title {
+    color: white;
+  }
+
+  .wellona-footer .column {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .wellona-footer .row-center {
+    flex-wrap: wrap;
+  }
+  .wellona-footer .column:nth-child(2) {
+    border: none;
+  }
+
+  .wellona-subscribe .section-title {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .wellona-subscribe .section-title {
+    font-size: 1rem;
+  }
+}
